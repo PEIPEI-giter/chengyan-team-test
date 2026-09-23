@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+data/logs/
+data/exports/
+data/chengyan.db
+data/chengyan.db-wal
+data/chengyan.db-shm
+data/seed/*.db-wal
+data/seed/*.db-shm
+.DS_Store
+Thumbs.db
