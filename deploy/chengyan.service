@@ -1,0 +1,21 @@
+[Unit]
+Description=Chengyan Team Test
+After=network.target
+
+[Service]
+Type=simple
+User=peipei
+Group=peipei
+WorkingDirectory=/opt/chengyan
+Environment=HOST=0.0.0.0
+Environment=PORT=5175
+Environment=NODE_ENV=production
+Environment=PATH=/home/peipei/.local/node-v24.21.0-linux-x64/bin:/usr/bin:/bin
+ExecStart=/home/peipei/.local/node-v24.21.0-linux-x64/bin/node /opt/chengyan/server.mjs
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
